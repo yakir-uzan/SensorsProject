@@ -6,7 +6,21 @@ using System.Threading.Tasks;
 
 namespace SensorsProject
 {
-    internal class Class1
+    //קלאס כללי ליצירת סנסורים
+    class Sensor
     {
+        public string Name { get; set; }
+        public string Type { get; set; }
+
+        public Sensor(string type, string name)
+        {
+            Name = name;
+            Type = type;
+        }
+
+        public void Activate()
+        {
+
+        }
     }
 }
