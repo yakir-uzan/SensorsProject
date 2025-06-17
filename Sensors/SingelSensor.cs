@@ -6,9 +6,6 @@ namespace SensorsProject.Sensors
     {
         public SignalSensor() : base("Signal") { }
 
-        public string RevealInfo(IranianAgent agent)
-        {
-            return $"Rank: {agent.Rank}";
-        }
+        
     }
 }
