@@ -1,6 +1,7 @@
 ﻿using System;
+using SensorsProject.Models;
 
-namespace SensorsProject.Agents
+namespace SensorsProject.Agents 
 {
     public class SeniorCommander : IranianAgent
     {

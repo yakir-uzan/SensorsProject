@@ -1,4 +1,7 @@
-﻿namespace SensorsProject.Models
+﻿using System;
+using System.Collections.Generic;
+
+namespace SensorsProject.Models
 {
     internal abstract class Sensor
     {

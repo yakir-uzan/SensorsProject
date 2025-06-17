@@ -3,21 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SensorsProject.Models;
 
-namespace SensorsProject.Models
-
-//קלאס ליצירת סנסור טרמי שיורש מקלאס סנסור
-class ThermalSensor : Sensor
+namespace SensorsProject.Sensors
 {
-    public ThermalSensor(int id) : base(id, "Thermal")
+    //קלאס ליצירת סנסור טרמי שיורש מקלאס סנסור
+    internal class ThermalSensor : Sensor
     {
-        Name = $"Thermal{id}";
-    }
+        public ThermalSensor(int id) : base(id, "Thermal")
+        {
+            Name = $"Thermal{id}";
+        }
 
-    //מתודה 
-    public override void Activate(IranianAgent agent)
-    {
+        //מתודה 
+        public override void Activate(IranianAgent agent)
+        {
 
+        }
     }
 }
+
+
 
