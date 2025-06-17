@@ -7,7 +7,7 @@ namespace SensorsProject
     {
         public CellularSensor(int id) : base(id, "Cellular")
         {
-            Name = $"Cellular{id}";
+            
         }
     }
 }
