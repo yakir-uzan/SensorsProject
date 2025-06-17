@@ -1,30 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SensorsProject
 {
-    internal class IranianAgent
+    internal abstract class IranianAgent
     {
         public string Name;
         public string Rank;
-        // רשימת החולשות
-        public List<string> ListWeaknesses;
-        // רשימת המוצמדים
-        public List<string> ListPinned;
+        public List<string> SecretSensors;
+        public List<string> AttachedSensors;
+        public int MaxSensors;
+        public int TurnCounter = 0;
 
+        protected static List<string> availableSensors = new List<string> { "Thermal", "Audio", "Pulse", "Motion", "Magnetic" };
 
-        public IranianAgent(string name, string rank, List<string> ListWeaknesses)
+        protected static Random random = new Random();
+
+        public IranianAgent(string name)
         {
             Name = name;
-            Rank = rank;
-            ListWeaknesses = 
-
-
+            SecretSensors = new List<string>();
+            AttachedSensors = new List<string>();
         }
-            
     }
 }
