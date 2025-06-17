@@ -4,8 +4,8 @@ namespace SensorsProject.Sensors
 {
     internal class PulseSensor : Sensor
     {
-        private int activationCount = 0;
-        public bool IsBroken => activationCount >= 3;
+        private int activCount = 0;
+        public bool IsBroken => activCount >= 3;
 
         public PulseSensor() : base("Pulse") { }
 
@@ -14,7 +14,7 @@ namespace SensorsProject.Sensors
             if (!IsBroken)
             {
                 base.Activate();
-                activationCount++;
+                activCount++;
             }
         }
     }

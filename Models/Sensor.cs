@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace SensorsProject.Models
 {
-    internal abstract class Sensor
+    public abstract class Sensor
     {
         public int Id { get; private set; }
         public string Type { get; set; }

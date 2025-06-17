@@ -43,13 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Agents\FootSolider.cs" />
+    <Compile Include="Agents\FootSoldier.cs" />
     <Compile Include="Agents\OrganizationLeader.cs" />
     <Compile Include="Agents\SeniorCommander.cs" />
     <Compile Include="Agents\SquadLeader.cs" />
     <Compile Include="Factories\AgentFactory.cs" />
     <Compile Include="Factories\SensorFactory.cs" />
-    <Compile Include="GameMng.cs" />
+    <Compile Include="Investigation\InvestigationMng.cs" />
     <Compile Include="Models\Sensor.cs" />
     <Compile Include="Models\IranianAgent.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
