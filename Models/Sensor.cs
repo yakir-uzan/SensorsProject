@@ -1,4 +1,4 @@
-﻿namespace SensorsProject
+﻿namespace SensorsProject.Models
 {
     internal abstract class Sensor
     {

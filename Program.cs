@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using SensorsProject.Agents; 
+using SensorsProject.Models;
 
 namespace SensorsProject
 {
@@ -10,6 +8,9 @@ namespace SensorsProject
     {
         static void Main(string[] args)
         {
+            FootSoldier soldier = new FootSoldier("Ali");
+            Console.WriteLine($"Name: {soldier.Name}, Rank: {soldier.Rank}, Max Sensors: {soldier.MaxSensors}");
+
         }
     }
 }
