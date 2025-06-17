@@ -1,7 +1,6 @@
 ﻿using System;
 using SensorsProject.Models;
 
-
 namespace SensorsProject.Agents
 {
     public class SquadLeader : IranianAgent

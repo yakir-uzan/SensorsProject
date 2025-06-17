@@ -1,12 +1,11 @@
 ﻿using System;
+using SensorsProject.Models;
 
 namespace SensorsProject.Agents
 {
     public class OrganizationLeader : IranianAgent
     {
-        public OrganizationLeader(string name) : base(name, "Organization Leader", 8)
-        {
-        }
+        public OrganizationLeader(string name) : base(name, "Organization Leader", 8) { }
 
         public override void CounterAttack()
         {
@@ -24,7 +23,7 @@ namespace SensorsProject.Agents
             }
         }
 
-        private List<string> GenerateSecretWeaknesses()
+        private List<string> GenSecretWeaknesses()
         {
             // זהה את המתודה הפרטית ממחלקת האב, 
             // מאחר ולא נגיש אליה יש להעתיק או לשנות את המבנה לשימוש חוזר

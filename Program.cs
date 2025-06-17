@@ -1,6 +1,7 @@
 ﻿using System;
 using SensorsProject.Agents; 
 using SensorsProject.Models;
+using SensorsProject.Factories;
 
 namespace SensorsProject
 {

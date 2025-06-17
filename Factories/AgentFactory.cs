@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using SensorsProject.sensors;
-using SensorsProject.agents;
+using SensorsProject.Models;
+using SensorsProject.Agents;
 
-namespace SensorsProject.factories
+
+namespace SensorsProject.Factories
 {
     public class AgentFactory
     {

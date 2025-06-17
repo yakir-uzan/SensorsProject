@@ -1,4 +1,6 @@
-﻿namespace SensorsProject.Models
+﻿using SensorsProject.Models;
+
+namespace SensorsProject.Sensors
 {
     // סנסור אודיו בלי יכולות מיוחדות
     internal class AudioSensor : Sensor

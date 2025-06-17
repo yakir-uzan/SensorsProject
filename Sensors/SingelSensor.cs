@@ -1,4 +1,6 @@
-﻿namespace SensorsProject
+﻿using SensorsProject.Models;
+
+namespace SensorsProject.Sensors
 {
     internal class SignalSensor : Sensor
     {
