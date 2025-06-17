@@ -9,7 +9,16 @@ namespace SensorsProject
     //קלאס ליצירת סנסור טרמי שיורש מקלאס סנסור
     class ThermalSensor : Sensor
     {
-        public ThermalSensor() : base("termal") { }
+        public ThermalSensor(int id) : base(id, "Thermal")
+        {
+            Name = $"Thermal{id}";
+        }
+
+        //מתודה 
+        public override void Activate(IranianAgent agent)
+        {
+
+        }
     }
 }
 

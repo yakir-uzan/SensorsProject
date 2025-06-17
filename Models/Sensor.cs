@@ -1,26 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SensorsProject
+﻿namespace SensorsProject
 {
-    //קלאס כללי ליצירת סנסורים
-    class Sensor
+    internal abstract class Sensor
     {
-        public string Name { get; set; }
+        public int Id { get; private set; }
         public string Type { get; set; }
+        public string Name => $"{Type}{Id}";
+        public bool IsActive { get; private set; } = false;
+        private static int counter = 0;
 
-        public Sensor(string type, string name)
+        public Sensor(string type)
         {
-            Name = name;
+            Id = ++counter;  
             Type = type;
         }
 
-        public void Activate()
+        // מתודה שמפעילה סנסורים
+        public virtual void Activate()
         {
+            IsActive = true;
+        }
 
+        //מתודה בוליאנית שבודקת אם קיים אצלו סנסור מסויים
+        public bool IsMatching(IranianAgent agent)
+        {
+            foreach (var sensor in agent.AttachedSensors)
+            {
+                if (sensor.GetType() == this.GetType())
+                    return true;
+            }
+            return false;
         }
     }
 }
