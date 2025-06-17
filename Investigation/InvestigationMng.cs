@@ -3,8 +3,9 @@ using System.Collections.Generic;
 
 namespace SensorsProject.Investigation
 {
-    public class InvestigationHelper
+    public class InvestigationMng
     {
+        //מתודה שמבצעת השוואה בין החולשות למוצמדים
         public static string CheckSensorsMatch(List<string> attachedSensors, List<string> secretWeakness)
         {
             // עותק של רשימת החולשות

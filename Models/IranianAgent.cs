@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace SensorsProject.Models
 {
-    internal abstract class IranianAgent
+    public abstract class IranianAgent
     {
         public string Name { get; set; }
         public string Rank { get; set; }
@@ -23,12 +23,12 @@ namespace SensorsProject.Models
             Name = name;
             Rank = rank;
             MaxSensors = maxSensors;
-            SecretWeakness = GenerateWeaknesses();
+            SecretWeakness = GenWeaknesses();
             AttachedSensors = new List<Sensor>();
         }
 
         //מתודה שמוסיפה סנסורים רנדומלית לרשימת החולשות
-        private List<string> GenerateWeaknesses()
+        private List<string> GenWeaknesses()
         {
             Random rnd = new Random();
             List<string> Weakness = new List<string>();
@@ -38,8 +38,17 @@ namespace SensorsProject.Models
                 int index = rnd.Next(availableSensors.Count);
                 Weakness.Add(availableSensors[index]);
             }
-
             return Weakness;
+        }
+
+        //מתודה שמצמידה סנסורים
+        public bool AttachSensor(Sensor sensor)
+        {
+            if (AttachedSensors.Count >= MaxSensors)
+                return false; 
+
+            AttachedSensors.Add(sensor);
+            return true;
         }
     }
 }
