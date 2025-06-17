@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SensorsProject
+namespace SensorsProject.Investigation
 {
     public class InvestigationHelper
     {
