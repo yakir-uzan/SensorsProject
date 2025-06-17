@@ -1,4 +1,4 @@
-﻿namespace SensorsProject
+﻿namespace SensorsProject.Factories
 {
     public class SensorFactory
     {
