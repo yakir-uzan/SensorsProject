@@ -6,6 +6,6 @@ namespace SensorsProject
     {
         //רשימה כללית של כל הסנסורים
         public static List<string> AllSensors = new List<string>
-        { "Thermal", "Audio", "Pulse", "Motion", "Magnetic", "Cellular", "Light", "Single"};
+        { "Thermal", "Audio", "Pulse", "Motion", "Magnetic", "Cellular", "Light", "Signal"};
     }
 }

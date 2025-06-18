@@ -50,6 +50,7 @@
     <Compile Include="Factories\AgentFactory.cs" />
     <Compile Include="Factories\SensorFactory.cs" />
     <Compile Include="Investigation\InvestigationMng.cs" />
+    <Compile Include="Utils\AgentUtils.cs" />
     <Compile Include="Models\Sensor.cs" />
     <Compile Include="Models\IranianAgent.cs" />
     <Compile Include="Program.cs" />
@@ -60,7 +61,7 @@
     <Compile Include="Sensors\MagneticSensor.cs" />
     <Compile Include="Sensors\MotionSensor.cs" />
     <Compile Include="Sensors\PulseSensor.cs" />
-    <Compile Include="Sensors\SingelSensor.cs" />
+    <Compile Include="Sensors\SignalSensor.cs" />
     <Compile Include="Sensors\TermalSensor.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -79,7 +80,6 @@
     <Folder Include="bin\Debug\" />
     <Folder Include="bin\Release\" />
     <Folder Include="obj\Debug\TempPE\" />
-    <Folder Include="Utils\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
