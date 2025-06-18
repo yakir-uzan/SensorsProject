@@ -10,19 +10,19 @@ namespace SensorsProject
         static void Main(string[] args)
         {
             // יצירת סוכן זוטר 
-            FootSoldier soldier = new FootSoldier("Yakir");
+            FootSoldier Agent = new FootSoldier("Yakir");
 
             // יצירת סנסורים  
             var sensor1 = new ThermalSensor();
             var sensor2 = new PulseSensor();
 
             // הצמדת סנסורים לסוכן
-            bool attached1 = soldier.AttachSensor(sensor1);
-            bool attached2 = soldier.AttachSensor(sensor2);
+            bool attached1 = Agent.AttachSensor(sensor1);
+            bool attached2 = Agent.AttachSensor(sensor2);
 
-            // הדפסת הסנסורים שהוספו
+            // הדפסת הסנסורים שנוספו
             Console.WriteLine("Attached sensors:");
-            foreach (var sensor in soldier.AttachedSensors)
+            foreach (var sensor in Agent.AttachedSensors)
             {
                 Console.WriteLine(sensor.Name);
             }
