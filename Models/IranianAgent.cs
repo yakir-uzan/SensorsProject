@@ -26,7 +26,6 @@ namespace SensorsProject.Models
             AttachedSensors = new List<Sensor>();
         }
 
-        //להחליף את הרשימה
         //מתודה שמוסיפה סנסורים רנדומלית לרשימת החולשות
         public List<string> GenWeaknesses()
         {
@@ -82,6 +81,5 @@ namespace SensorsProject.Models
 
             return $"{matches}/{SecretWeakness.Count}";
         }
-
     }
 }
