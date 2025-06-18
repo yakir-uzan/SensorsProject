@@ -50,6 +50,7 @@
     <Compile Include="Factories\AgentFactory.cs" />
     <Compile Include="Factories\SensorFactory.cs" />
     <Compile Include="Investigation\InvestigationMng.cs" />
+    <Compile Include="Investigation\Menu.cs" />
     <Compile Include="Utils\AgentUtils.cs" />
     <Compile Include="Models\Sensor.cs" />
     <Compile Include="Models\IranianAgent.cs" />

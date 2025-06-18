@@ -5,15 +5,12 @@ namespace SensorsProject.Models
 {
     public abstract class Sensor
     {
-        public int Id { get; private set; }
         public string Type { get; set; }
-        public string Name => $"{Type}{Id}";
         public bool IsActive { get; private set; } = false;
         private static int counter = 0;
 
         public Sensor(string type)
         {
-            Id = ++counter;  
             Type = type;
         }
 

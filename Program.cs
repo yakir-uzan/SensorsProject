@@ -9,6 +9,7 @@ namespace SensorsProject
     {
         static void Main(string[] args)
         {
+            GameMenu.Run();
             //// יצירת FootSoldier 
             //FootSoldier fs = new FootSoldier("mohamad");
             //Console.WriteLine("create Foot Soldier agent!");
@@ -22,16 +23,16 @@ namespace SensorsProject
 
             ////==================================================
 
-            //יצירת SquadLeader 
-            SquadLeader fs = new SquadLeader("ali");
-            Console.WriteLine("create Squad Leader agent!");
+            ////יצירת SquadLeader 
+            //SquadLeader fs = new SquadLeader("ali");
+            //Console.WriteLine("create Squad Leader agent!");
 
-            // יצירת חולשות לסוכן  
-            fs.GenWeaknesses();
-            foreach (var sensor in fs.SecretWeakness)
-            {
-                Console.WriteLine($"{fs.Name} whit {sensor}");
-            }
+            //// יצירת חולשות לסוכן  
+            //fs.GenWeaknesses();
+            //foreach (var sensor in fs.SecretWeakness)
+            //{
+            //    Console.WriteLine($"{fs.Name} whit {sensor}");
+            //}
 
             ////===================================================
 
@@ -61,24 +62,24 @@ namespace SensorsProject
 
             //===================================================
 
-            //יצירת חיישנים טרמי ןסיגנאל
-            Sensor Thermal = new ThermalSensor();
-            Sensor Signal = new SignalSensor();
-            Console.WriteLine("attach termal , signal");
+            ////יצירת חיישנים טרמי ןסיגנאל
+            //Sensor Thermal = new ThermalSensor();
+            //Sensor Signal = new SignalSensor();
+            //Console.WriteLine("attach termal , signal");
 
             //===================================================
 
             // הצמדת סנסורים לסוכן
-            fs.AttachSensor(Thermal);
-            fs.AttachSensor(Signal);
+            //fs.AttachSensor(Thermal);
+            //fs.AttachSensor(Signal);
 
             //===================================================
 
             // קריאה למתודה שבודקת התאמות
-            string result = fs.CheckSensorsMatch();
+            //string result = fs.CheckSensorsMatch();
 
             // הדפסת התוצאה
-            Console.WriteLine($"{fs.Name} Match: {result}");
+            //Console.WriteLine($"Match: {result}");
 
 
             //// הדפסת הסנסורים שנוספו
