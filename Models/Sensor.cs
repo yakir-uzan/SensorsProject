@@ -23,6 +23,7 @@ namespace SensorsProject.Models
             IsActive = true;
         }
 
+
         //מתודה בוליאנית שבודקת אם קיים אצלו סנסור מסויים
         public bool IsMatching(IranianAgent agent)
         {

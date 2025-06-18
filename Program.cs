@@ -9,23 +9,84 @@ namespace SensorsProject
     {
         static void Main(string[] args)
         {
-            // יצירת סוכן זוטר 
-            FootSoldier Agent = new FootSoldier("Yakir");
+            //// יצירת FootSoldier 
+            //FootSoldier fs = new FootSoldier("mohamad");
+            //Console.WriteLine("create Foot Soldier agent!");
 
-            // יצירת סנסורים  
-            var sensor1 = new ThermalSensor();
-            var sensor2 = new PulseSensor();
+            //// יצירת חולשות לסוכן  
+            //fs.GenWeaknesses();
+            //foreach (var sensor in fs.SecretWeakness)
+            //{
+            //    Console.WriteLine($"{fs.Name} whit {sensor}");
+            //}
+
+            ////==================================================
+
+            //יצירת SquadLeader 
+            SquadLeader fs = new SquadLeader("ali");
+            Console.WriteLine("create Squad Leader agent!");
+
+            // יצירת חולשות לסוכן  
+            fs.GenWeaknesses();
+            foreach (var sensor in fs.SecretWeakness)
+            {
+                Console.WriteLine($"{fs.Name} whit {sensor}");
+            }
+
+            ////===================================================
+
+            ////יצירת SquadLeader 
+            //SeniorCommander sc = new SeniorCommander("raga");
+            //Console.WriteLine("create Senior Commander agent!");
+
+            //// יצירת חולשות לסוכן  
+            //sc.GenWeaknesses();
+            //foreach (var sensor in sc.SecretWeakness)
+            //{
+            //    Console.WriteLine($"{sc.Name} whit {sensor}");
+            //}
+
+            ////===================================================
+
+            ////יצירת SquadLeader 
+            //OrganizationLeader ol = new OrganizationLeader("adam");
+            //Console.WriteLine("create Organization Leader agent!");
+
+            //// יצירת חולשות לסוכן  
+            //ol.GenWeaknesses();
+            //foreach (var sensor in ol.SecretWeakness)
+            //{
+            //    Console.WriteLine($"{ol.Name} whit {sensor}");
+            //}
+
+            //===================================================
+
+            //יצירת חיישנים טרמי ןסיגנאל
+            Sensor Thermal = new ThermalSensor();
+            Sensor Signal = new SignalSensor();
+            Console.WriteLine("attach termal , signal");
+
+            //===================================================
 
             // הצמדת סנסורים לסוכן
-            bool attached1 = Agent.AttachSensor(sensor1);
-            bool attached2 = Agent.AttachSensor(sensor2);
+            fs.AttachSensor(Thermal);
+            fs.AttachSensor(Signal);
 
-            // הדפסת הסנסורים שנוספו
-            Console.WriteLine("Attached sensors:");
-            foreach (var sensor in Agent.AttachedSensors)
-            {
-                Console.WriteLine(sensor.Name);
-            }
+            //===================================================
+
+            // קריאה למתודה שבודקת התאמות
+            string result = fs.CheckSensorsMatch();
+
+            // הדפסת התוצאה
+            Console.WriteLine($"{fs.Name} Match: {result}");
+
+
+            //// הדפסת הסנסורים שנוספו
+            //Console.WriteLine("Attached sensors:");
+            //foreach (var sensor in Agent.AttachedSensors)
+            //{
+            //    Console.WriteLine(sensor.Name);
+            //}
         }
     }
 }
